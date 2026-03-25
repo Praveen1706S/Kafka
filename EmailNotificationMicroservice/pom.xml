@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-<<<<<<< HEAD
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-=======
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
->>>>>>> 06368ff (Kakfa consumer)
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -13,11 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.appsdeveloperblog.ws</groupId>
-<<<<<<< HEAD
-	<artifactId>ProductsMicroservice</artifactId>
-=======
 	<artifactId>EmailNotificationMicroservice</artifactId>
->>>>>>> 06368ff (Kakfa consumer)
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
@@ -93,8 +85,4 @@
 		</plugins>
 	</build>
 
-<<<<<<< HEAD
 </project>
-=======
-</project>
->>>>>>> 06368ff (Kakfa consumer)

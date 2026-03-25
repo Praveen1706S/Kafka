@@ -49,7 +49,7 @@ public class ProductServiceImpl implements ProductService{
                 productId, productCreatedEvent).get();*/
 
         SendResult<String, ProductCreatedEvent> result
-                = kafkaTemplate.send("topic2",
+                = kafkaTemplate.send("product-created-events-topic",
                 productId, productCreatedEvent).get();   // to work with min.insync.replicas
 
 

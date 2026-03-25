@@ -1,4 +1,4 @@
-package com.appsdeveloperblog.ws.products.config;
+package com.appsdeveloperblog.ws.emailnotification.handler;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
