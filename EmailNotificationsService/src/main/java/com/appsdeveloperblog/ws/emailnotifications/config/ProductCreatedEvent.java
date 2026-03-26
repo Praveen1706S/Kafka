@@ -1,10 +1,11 @@
-package com.appsdeveloperblog.ws.emailnotification.handler;
+package com.appsdeveloperblog.ws.emailnotifications.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+
 
 @Data
 @NoArgsConstructor
@@ -18,5 +19,4 @@ public class ProductCreatedEvent {
     private BigDecimal price;
 
     private Integer quantity;
-
 }
