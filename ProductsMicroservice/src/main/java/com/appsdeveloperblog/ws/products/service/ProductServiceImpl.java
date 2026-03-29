@@ -2,6 +2,7 @@ package com.appsdeveloperblog.ws.products.service;
 
 import com.appsdeveloperblog.ws.products.config.ProductCreatedEvent;
 import com.appsdeveloperblog.ws.products.model.CreateProductRestModel;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -48,9 +49,18 @@ public class ProductServiceImpl implements ProductService{
                 = kafkaTemplate.send("product-created-events-topic",
                 productId, productCreatedEvent).get();*/
 
+
+        // it will give the access to work with message headers
+        ProducerRecord<String, ProductCreatedEvent>  record = new ProducerRecord<>(
+                "product-created-events-topic",
+                productId,
+                productCreatedEvent
+        );
+
+        record.headers().add("messageID ", UUID.randomUUID().toString().getBytes());
+
         SendResult<String, ProductCreatedEvent> result
-                = kafkaTemplate.send("product-created-events-topic",
-                productId, productCreatedEvent).get();   // to work with min.insync.replicas
+                = kafkaTemplate.send(record).get();   // to work with min.insync.replicas
 
 
         // If we add the below join method it will become synchronous communication
